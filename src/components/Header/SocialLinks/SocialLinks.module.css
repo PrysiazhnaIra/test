@@ -1,0 +1,13 @@
+.links {
+  display: flex;
+  gap: 15px;
+}
+
+.links a {
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.links a:hover,
+.links a:focus {
+  transform: scale(1.5);
+}

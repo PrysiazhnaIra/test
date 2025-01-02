@@ -1,0 +1,101 @@
+@import "modern-normalize";
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --background-grey: #ededed;
+  --placeholder-grey: #747474;
+  --orange: #fcac45;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  margin: 0;
+  min-width: 380px;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  display: flex;
+  padding: 15px 106px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border-radius: 3px;
+  border: 2px solid var(--orange);
+  color: var(--black);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  transform: scale(1.05);
+  background: var(--orange);
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
