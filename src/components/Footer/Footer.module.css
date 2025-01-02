@@ -1,0 +1,149 @@
+.mainWrapper {
+  background-color: var(--background-grey);
+  padding: 10px 57px 21px 57px;
+  display: grid;
+}
+
+.title {
+  color: var(--black);
+  text-align: center;
+  font-family: Italianno;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-areas:
+    "schedule schedule"
+    "location social";
+  grid-template-columns: 1fr 1fr;
+}
+
+.locationWrapper {
+  grid-area: location;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.locationLine {
+  width: 57px;
+  height: 1px;
+  background: var(--orange);
+  margin-bottom: 13px;
+}
+
+.locationList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scheduleWrapper {
+  grid-area: schedule;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.scheduleLine {
+  width: 116px;
+  height: 1px;
+  background: var(--orange);
+  margin-bottom: 15px;
+}
+
+.scheduleList {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 11px;
+}
+
+.socialWrapper {
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socialLine {
+  width: 57px;
+  height: 1px;
+  background: var(--orange);
+  margin-bottom: 13px;
+}
+
+.socialList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerLine {
+  height: 1px;
+  background: var(--orange);
+  width: 100%;
+  margin-top: 26px;
+  margin-bottom: 18px;
+}
+
+.text {
+  color: var(--black);
+  font-family: Roboto;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (min-width: 1400px) {
+  .mainWrapper {
+    background-color: var(--white);
+    padding-top: 26px;
+  }
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footerLine,
+  .locationLine,
+  .socialLine,
+  .scheduleLine {
+    display: none;
+  }
+
+  .locationSeparator {
+    width: 28.773px;
+    height: 1px;
+    background: var(--orange);
+    margin: 0 auto;
+  }
+
+  .lineSeparator {
+    width: 1px;
+    height: 163.003px;
+    background: var(--orange);
+  }
+
+  .text {
+    font-size: 12px;
+  }
+
+  .locationList,
+  .scheduleList,
+  .socialList {
+    margin-top: 21px;
+  }
+
+  .copyright {
+    margin-top: 74px;
+  }
+}

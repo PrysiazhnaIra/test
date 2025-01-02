@@ -1,27 +1,30 @@
 import { NavLink } from "react-router-dom";
 import SocialLinks from "./SocialLinks/SocialLinks";
+import { IoMenu } from "react-icons/io5";
+import css from "./Header.module.css";
 
 export default function Header() {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>
+    <header className={css.header}>
+      <nav className={css.nav}>
+        <ul className={css.list}>
+          <li className={`${css.item} ${css.descItem}`}>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>
+          <li className={`${css.item} ${css.descItem}`}>
             <NavLink to="/menu">Menu</NavLink>
           </li>
-          <li>
+          <li className={`${css.item} ${css.logo}`}>
             <a href="/">Selve Restourant</a>
-            <div></div>
+            <div className={css.line}></div>
           </li>
-          <li>
+          <li className={`${css.item} ${css.descItem}`}>
             <a href="#contacts">Contacts</a>
           </li>
         </ul>
       </nav>
-      <SocialLinks />
+      <SocialLinks className={`${css.item} ${css.descItem}`} />
+      <IoMenu className={css.iconMenu} />
     </header>
   );
 }

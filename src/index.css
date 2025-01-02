@@ -53,6 +53,13 @@ img {
 a {
   color: currentColor;
   text-decoration: none;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  transform: scale(1.05);
+  color: var(--orange);
 }
 
 button {
