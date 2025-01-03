@@ -6,6 +6,7 @@
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 30px;
+  padding-left: 30px;
 }
 
 .list {
@@ -42,6 +43,11 @@
   width: 30px;
 }
 
+.openModalWindowBtn {
+  border: none;
+  padding: 0;
+}
+
 @media (min-width: 768px) {
   .header {
     justify-content: center;
@@ -53,7 +59,8 @@
     gap: 77px;
   }
 
-  .iconMenu {
+  .iconMenu,
+  .openModalWindowBtn {
     display: none;
   }
 
