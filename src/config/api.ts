@@ -18,7 +18,11 @@ export async function fetchMealByName(name: string = ""): Promise<Meal[]> {
   }
 }
 
-export function getUserFriendlyErrorMessage(httpError: object): string {
+interface HttpError {
+  status?: number;
+}
+
+export function getUserFriendlyErrorMessage(httpError: HttpError): string {
   const defaultErrorMessage: string = "Something wrong. Please try again";
   if (httpError?.status) {
     if (httpError.status >= 500) {
