@@ -1,8 +1,12 @@
 import css from "./LoadMore.module.css";
 
-export default function LoadMore() {
+interface LoadMoreBtnProps {
+  onClick: () => void;
+}
+
+export default function LoadMore({ onClick }: LoadMoreBtnProps) {
   return (
-    <button type="button" className={css.btn}>
+    <button className={css.btn} onClick={onClick}>
       More
     </button>
   );

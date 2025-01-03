@@ -1,3 +1,17 @@
 .menu {
   margin-top: 73px;
 }
+
+@media (min-width: 768px) {
+  .menu {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .menu {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
