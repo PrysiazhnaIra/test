@@ -11,7 +11,7 @@ export async function fetchMealByName(name: string = ""): Promise<Meal[]> {
       params: { s: name },
     });
     console.log("Response : ", response);
-    return response.data.meals;
+    return response.data.meals || [];
   } catch (error) {
     console.error("Error fetching meal:", error);
     throw error;
