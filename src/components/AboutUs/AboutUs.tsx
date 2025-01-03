@@ -28,8 +28,8 @@ export default function AboutUs() {
         </div>
       </div>
       <img
-        src="/public/chef.jpg"
-        srcSet="/public/chef2x.jpg"
+        src="/chef.jpg"
+        srcSet="/chef2x.jpg"
         alt="Chef"
         className={css.img}
       />

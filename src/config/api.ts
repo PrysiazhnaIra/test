@@ -10,7 +10,6 @@ export async function fetchMealByName(name: string = ""): Promise<Meal[]> {
     const response = await api.get<{ meals: Meal[] }>("search.php", {
       params: { s: name },
     });
-    console.log("Response : ", response);
     return response.data.meals || [];
   } catch (error) {
     console.error("Error fetching meal:", error);
