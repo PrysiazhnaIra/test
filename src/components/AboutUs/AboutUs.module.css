@@ -88,4 +88,8 @@
     align-items: flex-start;
     margin-bottom: 0px;
   }
+
+  .textWrapper {
+    width: 540px;
+  }
 }

@@ -1,50 +1,77 @@
-# React + TypeScript + Vite
+# Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Displaying Meals**
+The "Menu" page fetches data from an external API and displays the first 5 dishes from the list. The meals are rendered dynamically using a React component.
 
-Currently, two official plugins are available:
+**Search Functionality**
+The search bar allows users to find meals by their names. As users type, a request is sent to the API to fetch and display matching meals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Loading Indicator**
+A loader is displayed in the interface while waiting for data to be fetched from the API. This enhances user experience by providing feedback during asynchronous operations.
 
-## Expanding the ESLint configuration
+**Error Handling**
+The application includes robust error handling. If an error occurs during data fetching (e.g., network issues or invalid API responses), a user-friendly error message is displayed in the interface. This ensures the user is informed and can retry or adjust their input.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Home Page:**
 
-- Configure the top-level `parserOptions` property like this:
+- Includes: navigation, banner, general info, top three meals of the menu, button "MORE" which is capable to load more meals and contact data.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+![example](./public/extra/1d.png "example")
+![example](./public/extra/2d.png "example")
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. **Menu Page:**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Displays a list of available meals.
+- Supports lazy loading of additional meals using a "MORE" - button.
+- Includes a search input in order to find the necessary meal.
+  ![example](./public/extra/3d.png "example")
+  ![example](./public/extra/4d.png "example")
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. **Not Found Page**
+
+- Includes user-friendly message indicating the requested page was not found.
+- A button to redirect users go back.
+  ![example](./public/extra/5d.png "example")
+
+4. **Adaptation**
+
+- Responsive design has been implemented to ensure seamless adaptation across devices with screen widths ranging from 380px to 1400px.
+  ![example](./public/extra/1m.png "example")
+  ![example](./public/extra/2m.png "example")
+
+## Backend Integration
+
+**API Endpoints:**
+
+- GET /menu: Retrieve all meals.
+
+## Technologies Used
+
+- **Frontend Framework:** React (bundled with Vite).
+- **Routing:** React Router.
+- **HTTP Requests:** Axios.
+- **Styling:** CSS Modules.
+- **Notifications:** react-hot-toast.
+
+## Installation
+
+1. Clone the repository: git clone
+   `https://github.com/PrysiazhnaIra/test.git`
+
+2. Install dependencies: `npm install`
+
+3. Start the development server: `npm run dev`
+
+4. Open your browser and navigate to `http://localhost:5173.`
+
+## Deployment
+
+The project is deployed and accessible at:
+
+- Live Demo: [Test](https://test-tau-seven-62.vercel.app/)
+
+## Author
+
+- Name: Ira Prysiazhna
+- [My GitHub Profile URL](https://github.com/PrysiazhnaIra)
+- [My LinkedIn Profile URL](https://www.linkedin.com/in/ira-prysiazhna/)
