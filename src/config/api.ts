@@ -17,3 +17,15 @@ export async function fetchMealByName(name: string = ""): Promise<Meal[]> {
     throw error;
   }
 }
+
+export function getUserFriendlyErrorMessage(httpError: object): string {
+  const defaultErrorMessage: string = "Something wrong. Please try again";
+  if (httpError?.status) {
+    if (httpError.status >= 500) {
+      return "Internal server error. Please try again later.";
+    } else if (httpError.status >= 400 && httpError.status < 500) {
+      return "Something wrong with your request. Please check your data";
+    }
+  }
+  return defaultErrorMessage;
+}

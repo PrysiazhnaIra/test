@@ -2,6 +2,11 @@
   margin-top: 73px;
 }
 
+.errorText {
+  padding: 50px;
+  font-size: 18px;
+}
+
 @media (min-width: 768px) {
   .menu {
     padding-left: 80px;

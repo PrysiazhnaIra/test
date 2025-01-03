@@ -21,7 +21,9 @@ export default function MenuList({ items, size }: MenuListProps) {
           ))}
         </ul>
       ) : (
-        <p>Nothing was found for your request. Please try again.</p>
+        <p className={css.errorText}>
+          Nothing was found for your request. Please try again.
+        </p>
       )}
     </section>
   );

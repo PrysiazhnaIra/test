@@ -6,8 +6,9 @@ import MenuList from "../../components/MenuList/MenuList";
 import Search from "../../components/Search/Search";
 import TitleMenu from "../../components/TitleMenu/TitleMenu";
 import { Meal } from "../../types";
-import { fetchMealByName } from "../../config/api";
+import { fetchMealByName, getUserFriendlyErrorMessage } from "../../config/api";
 import Loader from "../../components/Loader/Loader";
+import { toast, Toaster } from "react-hot-toast";
 
 export default function MenuPage() {
   const step: number = 5;
@@ -21,7 +22,8 @@ export default function MenuPage() {
     fetchMealByName(searchText)
       .then((response) => setItems(response))
       .catch((error) => {
-        console.error("ERROR: ", error);
+        const errorMessage: string = getUserFriendlyErrorMessage(error);
+        toast.error(errorMessage);
       })
       .finally(() => setIsLoading(false));
   }, [searchText]);
@@ -38,6 +40,7 @@ export default function MenuPage() {
   return (
     <div>
       <Header />
+      <Toaster position="top-center" reverseOrder={false} />
       <TitleMenu />
       <Search onChange={onChange} />
       {isLoading && <Loader />}
